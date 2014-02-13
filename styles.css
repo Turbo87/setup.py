@@ -24,6 +24,11 @@ p:last-child {
     margin-bottom: 0;
 }
 
+small {
+    font-size: 85%;
+    line-height: 150%;
+}
+
 h1 {
     margin: 20px;
     font-family: monospace;
