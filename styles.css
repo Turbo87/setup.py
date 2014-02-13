@@ -101,10 +101,11 @@ body, .container, .col {
 }
 
 .item {
-    cursor: pointer;
+    display: block;
+    margin: -10px;
     padding: 3px 7px;
-    margin: -3px -7px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .highlighted {
