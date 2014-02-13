@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>setup.py cheatsheet</title>
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+    <h1><strong>setup.py</strong> cheatsheet</h1>
+
+    <div class="container">
+      <div class="col box">
+
+<code class="sample"><span class="item" data-key="shebang"><span class="comment">#!/usr/bin/env python</span></span>
+
+<span class="item" data-key="import"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span>
+
+<span class="item" data-key="setup">setup(</span>
+    <span class="item" data-key="name">name<span class="operator">=</span><span class="string">'aerofiles'</span>,</span>
+    <span class="item" data-key="version">version<span class="operator">=</span><span class="string">'0.1.0'</span>,</span>
+    <span class="item" data-key="description">description<span class="operator">=</span><span class="string">'waypoint file readers and writers for aviation'</span>,</span>
+    long_description<span class="operator">=</span>...,
+    url<span class="operator">=</span><span class="string">'http://aerofiles.readthedocs.org/'</span>,
+    license<span class="operator">=</span><span class="string">'MIT'</span>,
+    author<span class="operator">=</span><span class="string">'Tobias Bieniek'</span>,
+    author_email<span class="operator">=</span><span class="string">'tobias.bieniek@gmx.de'</span>,
+    classifiers<span class="operator">=</span>[
+        <span class="string">'Development Status :: 1 - Planning'</span>,
+        <span class="string">'Intended Audience :: Developers'</span>,
+        <span class="string">'License :: OSI Approved :: MIT License'</span>,
+        <span class="string">'Natural Language :: English'</span>,
+        <span class="string">'Operating System :: OS Independent'</span>,
+        <span class="string">'Programming Language :: Python'</span>,
+        <span class="string">'Topic :: Scientific/Engineering :: GIS'</span>,
+    ],
+    packages<span class="operator">=</span>find_packages(exclude=[<span class="string">'tests*'</span>]),
+)</code>
+
+      </div>
+
+      <div class="col box">
+
+        <div class="help" id="cheatsheet">
+        <p>Welcome to the <strong>setup.py</strong> cheatsheet!</p>
+        <p>This is an interactive guide for exploring various important parameters of the <a href="http://docs.python.org/2/distutils/setupscript.html">setup.py</a> packaging script format for <a href="http://www.python.org/">python</a> applications.</p>
+        <p>You can access information about parameters by <strong>hovering over</strong> or <strong>clicking</strong> the property name.</p>
+        <p><small>Thanks to <a href="http://nodejitsu.com">Nodejitsu</a> for their <a href="http://package.json.nodejitsu.com/">package.json cheatsheet</a> which inspired me to create this page.</small></p>
+        </div>
+
+        <div class="help" style="display:none" id="shebang">
+        <h2>The Python shebang</h2>
+        <p>Use this in the first line of the script to tell Unix-like system to start it with the Python interpreter by default.</p>
+        </div>
+
+        <div class="help" style="display:none" id="import">
+        <h2>The distutils import</h2>
+        <p><code>setup.py</code> is a standard python script that calls a <code>setup()</code> function. You have to import the function from the <code>distutils.core</code> module before you can use it.</p>
+        </div>
+
+        <div class="help" style="display:none" id="setup">
+        <h2>The <code>setup()</code> call</h2>
+        <p>Most information that you supply to the <code>Distutils</code> package is supplied as keyword arguments to the <code>setup()</code> function.</p>
+        <p><strong>Hover</strong> over or <strong>click</strong> on the individual arguments to see the details.</p>
+        </div>
+
+        <div class="help" style="display:none" id="name">
+        <h2>The unique name of your package</h2>
+        <p><i>(Required)</i></p>
+        <p>This will indicate the name of the package in the <a href="https://pypi.python.org/">Python Package Index</a> (if you choose to publish it).</p>
+        <p>Keep it short and try not to use any special characters.</p>
+        </div>
+
+        <div class="help" style="display:none" id="version">
+        <h2>The package version</h2>
+        <p><i>(Required)</i></p>
+        <p>This field describes the version of your package. It should use the format described by <a href="http://www.python.org/dev/peps/pep-0386/#the-new-versioning-algorithm">PEP386</a>.</p>
+        <p>Try to follow the rules of <a href="http://semver.org/">Semantic Versioning</a>.</p>
+        <p>Examples:
+          <ul>
+            <li>0.4</li>
+            <li>0.4.1</li>
+            <li>0.5a1</li>
+            <li>0.5b3</li>
+            <li>0.9.6</li>
+            <li>1.0</li>
+            <li>1.0.4a4</li>
+            <li>1.0.4b1</li>
+          </ul>
+        </p>
+        </div>
+
+        <div class="help" style="display:none" id="description">
+        <h2>The description of the project</h2>
+        <p>Try to keep it short, concise and in one line.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+    $('h1').mouseover(function(e) {
+      $('.item').removeClass('highlighted');
+
+      $('.help').hide();
+      $('#cheatsheet').show();
+    })
+
+    var highlight = function(e) {
+      var el = $(this);
+      var key = el.data('key');
+
+      $('.item').removeClass('highlighted');
+      el.addClass('highlighted');
+
+      $('.help').hide();
+      $('#' + key).show();
+    };
+
+    $('.item').click(highlight).mouseover(highlight)
+    </script>
+  </body>
+</html>
