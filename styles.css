@@ -102,7 +102,7 @@ body, .container, .col {
     border-radius: 4px;
 }
 
-.item:hover, .highlighted {
+.highlighted {
     background-color: #f5fccc;
 }
 

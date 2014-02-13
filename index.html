@@ -38,7 +38,8 @@
         <span class="string">'Topic :: Scientific/Engineering :: GIS'</span>,
     ],
     packages<span class="operator">=</span>find_packages(exclude=[<span class="string">'tests*'</span>]),
-)</code>
+<span class="item" data-key="setup">)</span>
+</code>
 
       </div>
 
@@ -115,7 +116,7 @@
       var key = el.data('key');
 
       $('.item').removeClass('highlighted');
-      el.addClass('highlighted');
+      $('.sample').find("[data-key='" + key + "']").addClass('highlighted');
 
       $('.help').hide();
       $('#' + key).show();
