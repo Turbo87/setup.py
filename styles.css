@@ -92,7 +92,7 @@ body, .container, .col {
     color: #409b1c;
 }
 
-.builtin, .number {
+.builtin, .number, .symbol {
     color: #3b5bb5;
 }
 

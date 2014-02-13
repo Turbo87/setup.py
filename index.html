@@ -23,7 +23,7 @@
 <span class="item" data-key="name">    name<span class="operator">=</span><span class="string">'aerofiles'</span>,</span>
 <span class="item" data-key="version">    version<span class="operator">=</span><span class="string">'0.1.0'</span>,</span>
 <span class="item" data-key="description">    description<span class="operator">=</span><span class="string">'waypoint file readers and writers for aviation'</span>,</span>
-    long_description<span class="operator">=</span>...,
+<span class="item" data-key="long_description">    long_description<span class="operator">=</span>...,</span>
 <span class="item" data-key="url">    url<span class="operator">=</span><span class="string">'https://github.com/Turbo87/aerofiles'</span>,</span>
 <span class="item" data-key="download_url">    download_url<span class="operator">=</span><span class="string">'https://pypi.python.org/pypi/aerofiles'</span>,</span>
 <span class="item" data-key="license">    license<span class="operator">=</span><span class="string">'MIT'</span>,</span>
@@ -103,6 +103,28 @@
         <div class="help" style="display:none" id="description">
         <h2>The description of the project</h2>
         <p>Try to keep it short, concise and in one line.</p>
+        </div>
+
+        <div class="help" style="display:none" id="long_description">
+        <h2>The <em>long</em> description of the project</h2>
+        <p>This usually contains the content of your README file and should be written in <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> markup.</p>
+        <p>It is common to use the following code to include the README and possible other files directly:</p>
+        <p>
+<code class="sample">
+<span class="keyword">import</span> os
+
+<span class="keyword">def</span> <span class="symbol">read</span>(*paths):
+    <span class="string">"""Build a file path from *paths* and return the contents."""</span>
+    <span class="keyword">with</span> <span class="builtin">open</span>(os.path.join(<span class="operator">*</span>paths), <span class="string">'r'</span>) <span class="keyword">as</span> f:
+        <span class="keyword">return</span> f.read()
+
+setup(
+    ...
+    long_description<span class="operator">=</span>read(<span class="string">'README.rst'</span>),
+    ...
+)
+</code>
+        </p>
         </div>
 
         <div class="help" style="display:none" id="url">
