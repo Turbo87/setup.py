@@ -184,7 +184,9 @@ setup(
       $('#' + key).show();
     };
 
-    $('.item').click(highlight).mouseover(highlight)
+    $('.item').filter(function() {
+      return $(this).data('key');
+    }).click(highlight).mouseover(highlight)
     </script>
   </body>
 </html>
