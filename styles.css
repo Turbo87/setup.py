@@ -117,3 +117,18 @@ body, .container, .col {
     font-family: "Droid Sans", "Helvetica", "Arial", sans;
     line-height: 38px;
 }
+
+.ribbon {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.ribbon:hover {
+    background-color: transparent;
+}
+
+.ribbon img {
+    border: 0;
+}
