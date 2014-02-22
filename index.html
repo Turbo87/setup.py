@@ -43,6 +43,11 @@
         <span class="string">'Programming Language :: Python'</span>,
         <span class="string">'Topic :: Scientific/Engineering :: GIS'</span>,
     ],</span>
+<span class="item" data-key="dependencies">    install_requires<span class="operator">=</span>[
+        <span class="string">'utm'</span>,
+        <span class="string">'SQLAlchemy&gt;=0.6'</span>,
+        <span class="string">'BrokenPackage&gt;=0.7,&lt;1.0'</span>,
+    ],</span>
 <span class="item">    packages<span class="operator">=</span>find_packages(exclude=[<span class="string">'tests*'</span>]),</span>
 <span class="item" data-key="setup">)</span>
 </code>
@@ -164,6 +169,18 @@ setup(
         <h2>Project classifiers</h2>
         <p>This list helps the <a href="https://pypi.python.org/">Python Package Index</a> to classify and filter projects by their most important attributes.</p>
         <p>Only string from the <a href="https://pypi.python.org/pypi?:action=list_classifiers">official list</a> must be used. Including custom classifiers will result in package rejection.</p>
+        </div>
+
+        <div class="help" style="display:none" id="dependencies">
+        <h2>Dependencies</h2>
+        <p>If your project depends on other packages then use this list to declare those dependencies.</p>
+        <p>Format: <code>packagename[extra1,extra2]&gt;=0.5a,&lt;=1.0</code></p>
+        <p>
+            <b><code>packagename</code></b>: name of the other package<br/>
+            <b><code>[extra1,extra2]</code></b>: optional list of "extras"<br/>
+            <b><code>&gt;=0.5a,&lt;1.0</code></b>: optional list of version specifiers<br/>
+        </p>
+        <p><small>More information is available in the <a href="http://pythonhosted.org/setuptools/setuptools.html#declaring-dependencies">setuptools documentation</a>.</small></p>
         </div>
 
       </div>
