@@ -23,6 +23,7 @@
 <span class="item" data-key="import"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span>
 
 <span class="item" data-key="setup">setup(</span>
+<span class="item">    <span class="comment">### Metadata</span></span>
 <span class="item" data-key="name">    name<span class="operator">=</span><span class="string">'aerofiles'</span>,</span>
 <span class="item" data-key="version">    version<span class="operator">=</span><span class="string">'0.1.0'</span>,</span>
 <span class="item" data-key="description">    description<span class="operator">=</span><span class="string">'waypoint file readers and writers for aviation'</span>,</span>
@@ -43,6 +44,7 @@
         <span class="string">'Programming Language :: Python'</span>,
         <span class="string">'Topic :: Scientific/Engineering :: GIS'</span>,
     ],</span>
+<span class="item">    <span class="comment">### Dependencies</span></span>
 <span class="item" data-key="dependencies">    install_requires<span class="operator">=</span>[
         <span class="string">'utm'</span>,
         <span class="string">'SQLAlchemy&gt;=0.6'</span>,
@@ -51,6 +53,7 @@
 <span class="item" data-key="dependency_links">    dependency_links<span class="operator">=</span>[
         <span class="string">'git+https://github.com/Turbo87/utm.git@v0.3.1#egg=utm-0.3.1'</span>,
     ],</span>
+<span class="item">    <span class="comment">### Contents</span></span>
 <span class="item">    packages<span class="operator">=</span>find_packages(exclude=[<span class="string">'tests*'</span>]),</span>
 <span class="item" data-key="setup">)</span>
 </code>
