@@ -48,6 +48,9 @@
         <span class="string">'SQLAlchemy&gt;=0.6'</span>,
         <span class="string">'BrokenPackage&gt;=0.7,&lt;1.0'</span>,
     ],</span>
+<span class="item" data-key="dependency_links">    dependency_links<span class="operator">=</span>[
+        <span class="string">'git+https://github.com/Turbo87/utm.git@v0.3.1#egg=utm-0.3.1'</span>,
+    ],</span>
 <span class="item">    packages<span class="operator">=</span>find_packages(exclude=[<span class="string">'tests*'</span>]),</span>
 <span class="item" data-key="setup">)</span>
 </code>
@@ -181,6 +184,22 @@ setup(
             <b><code>&gt;=0.5a,&lt;1.0</code></b>: optional list of version specifiers<br/>
         </p>
         <p><small>More information is available in the <a href="http://pythonhosted.org/setuptools/setuptools.html#declaring-dependencies">setuptools documentation</a>.</small></p>
+        </div>
+
+        <div class="help" style="display:none" id="dependency_links">
+        <h2>Dependency Links</h2>
+        <p>If any of your project dependencies are not registered on PyPI you can use this list to tell setuptools how to resolve them.</p>
+        <p>Format: <code>[vcs+]proto://host/path@revision#egg=packagename-version</code></p>
+        <p>
+          Examples:
+          <small>
+          <ul>
+            <li>http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz</li>
+            <li>git+https://github.com/Turbo87/utm.git@v0.3.1#egg=utm-0.3.1</li>
+          </ul>
+          </small>
+        </p>
+        <p><small>More information is available in the <a href="http://pythonhosted.org/setuptools/setuptools.html#dependencies-that-aren-t-in-pypi">setuptools documentation</a>.</small></p>
         </div>
 
       </div>
