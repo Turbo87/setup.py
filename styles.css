@@ -90,9 +90,12 @@ body, .container, div {
     padding: 1em;
 }
 
+pre {
+    margin: 0;
+}
+
 .sample {
     display: block;
-    white-space: pre-wrap;
     font-size: 14px;
     line-height: 22px;
 }
